@@ -13,7 +13,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   if (!product) notFound();
   const { userId, votedIds } = await getVoterState([product.id]);
   const isOwner = userId === product.user_id;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://truetop.vercel.app").replace(/\/+$/, "");
   const verified = Boolean(product.verified_at);
 
   return (
