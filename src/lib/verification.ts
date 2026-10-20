@@ -12,7 +12,7 @@ export type CheckResult = {
 
 const FETCH_OPTS: RequestInit = {
   redirect: "follow",
-  headers: { "user-agent": "TrueTop-Checker/1.0 (+https://proofboard-eight.vercel.app)" },
+  headers: { "user-agent": "TrueTop-Checker/1.0 (+https://truetop.vercel.app)" },
   signal: AbortSignal.timeout(10000),
 };
 
