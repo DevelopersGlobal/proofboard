@@ -15,7 +15,7 @@ export default function VerifyPanel({
 }) {
   const [result, setResult] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
-  const snippet = `<a href="${siteUrl}/product/${slug}" data-proofboard-token="${token}">Verified on ProofBoard</a>`;
+  const snippet = `<a href="${siteUrl}/product/${slug}" data-truetop-token="${token}">Verified on TrueTop</a>`;
 
   function runCheck() {
     startTransition(async () => {
@@ -38,7 +38,7 @@ export default function VerifyPanel({
       </p>
       <ol className="mt-3 list-decimal space-y-2 pl-5 text-neutral-700">
         <li>
-          Serve a file at <span className="font-mono">https://{domain}/.well-known/proofboard.txt</span> containing:
+          Serve a file at <span className="font-mono">https://{domain}/.well-known/truetop.txt</span> containing:
           <code className="mt-1 block break-all rounded bg-white p-2 font-mono text-xs">{token}</code>
         </li>
         <li>

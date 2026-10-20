@@ -3,9 +3,9 @@ export const metadata = { title: "About" };
 export default function AboutPage() {
   return (
     <article className="prose prose-neutral max-w-2xl">
-      <h1>About ProofBoard</h1>
+      <h1>About TrueTop</h1>
       <p>
-        Launch boards rank by whoever brought the biggest crowd. ProofBoard ranks on one checked
+        Launch boards rank by whoever brought the biggest crowd. TrueTop ranks on one checked
         fact instead: whether the maker proved control of the domain behind the listing.
       </p>
       <h2>How ranking works</h2>
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <h2>What verification means</h2>
       <p>
         The maker places a token - a small file or an HTML badge - on the product&apos;s own domain,
-        and ProofBoard fetches it directly. No account connections, no analytics access, nothing to
+        and TrueTop fetches it directly. No account connections, no analytics access, nothing to
         revoke. The proof is re-checked on a rolling cycle; if it disappears, the verified mark and
         the bonus drop at the next check, and the listing shows the date the proof was last confirmed.
       </p>
@@ -30,7 +30,7 @@ export default function AboutPage() {
       </p>
       <h2>Open source</h2>
       <p>
-        ProofBoard is open source under the MIT license. Ranking inputs are published on every
+        TrueTop is open source under the MIT license. Ranking inputs are published on every
         listing, so you can check the arithmetic yourself.
       </p>
     </article>

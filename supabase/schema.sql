@@ -1,4 +1,4 @@
--- ProofBoard schema. Run once in the Supabase SQL editor.
+-- TrueTop schema. Run once in the Supabase SQL editor.
 
 create table if not exists products (
   id uuid primary key default gen_random_uuid(),

@@ -8,7 +8,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: { default: "ProofBoard - launches ranked on proof", template: "%s | ProofBoard" },
+  title: { default: "TrueTop - launches ranked on proof", template: "%s | TrueTop" },
   description: "A product launch board where domain-verified products outrank unverified ones, and votes only move you within your evidence band.",
 };
 

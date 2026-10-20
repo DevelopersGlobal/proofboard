@@ -19,7 +19,7 @@ export default async function CertifiedPage() {
     <div>
       <h1 className="text-2xl font-bold tracking-tight">Certified sites</h1>
       <p className="mt-2 max-w-2xl text-sm text-neutral-600">
-        These domains serve the ProofBoard badge from their own site. The badge is re-fetched on a
+        These domains serve the TrueTop badge from their own site. The badge is re-fetched on a
         rolling cycle; if it comes down, the listing drops off this page and loses its bonus at the
         next check. Everything here was verified as of the date shown.
       </p>
