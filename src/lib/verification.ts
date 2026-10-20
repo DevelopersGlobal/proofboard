@@ -1,5 +1,5 @@
 // Domain-control proof. A listing is verified when the product's own domain
-// serves the listing's token, either as a file at /.well-known/proofboard.txt
+// serves the listing's token, either as a file at /.well-known/truetop.txt
 // or as an HTML snippet (the "badge") anywhere on the homepage.
 // The badge doubles as the visible mark; only the badge earns the live-badge bonus.
 
@@ -12,7 +12,7 @@ export type CheckResult = {
 
 const FETCH_OPTS: RequestInit = {
   redirect: "follow",
-  headers: { "user-agent": "ProofBoard-Checker/1.0 (+https://proofboard.app)" },
+  headers: { "user-agent": "TrueTop-Checker/1.0 (+https://truetop.vercel.app)" },
   signal: AbortSignal.timeout(10000),
 };
 
@@ -27,21 +27,21 @@ async function fetchText(url: string): Promise<string | null> {
 }
 
 export function badgeSnippet(siteUrl: string, token: string): string {
-  return `<a href="${siteUrl}" data-proofboard-token="${token}" rel="dofollow">Verified on ProofBoard</a>`;
+  return `<a href="${siteUrl}" data-truetop-token="${token}" rel="dofollow">Verified on TrueTop</a>`;
 }
 
 export async function checkDomain(domain: string, token: string): Promise<CheckResult> {
   const checkedAt = new Date().toISOString();
   const base = `https://${domain}`;
 
-  const fileBody = await fetchText(`${base}/.well-known/proofboard.txt`);
+  const fileBody = await fetchText(`${base}/.well-known/truetop.txt`);
   if (fileBody !== null && fileBody.includes(token)) {
     return { ok: true, badge: false, detail: "token file served from domain", checkedAt };
   }
 
   const html = await fetchText(base);
   if (html !== null) {
-    if (html.includes(`data-proofboard-token="${token}"`) || html.includes(`data-proofboard-token='${token}'`)) {
+    if (html.includes(`data-truetop-token="${token}"`) || html.includes(`data-truetop-token='${token}'`)) {
       return { ok: true, badge: true, detail: "badge live on homepage", checkedAt };
     }
     if (html.includes(token)) {

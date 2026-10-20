@@ -1,4 +1,4 @@
-# ProofBoard
+# TrueTop
 
 A product launch board ranked on proof, not reach. Makers prove control of the
 domain behind their listing; verified products rank in a band above unverified
@@ -25,9 +25,9 @@ date) so anyone can check the arithmetic.
 A listing is verified when its own domain serves the listing's unique token,
 checked two ways:
 
-1. A file at `https://<domain>/.well-known/proofboard.txt` containing the token, or
+1. A file at `https://<domain>/.well-known/truetop.txt` containing the token, or
 2. An HTML badge on the homepage:
-   `<a href="<board>/product/<slug>" data-proofboard-token="<token>">Verified on ProofBoard</a>`
+   `<a href="<board>/product/<slug>" data-truetop-token="<token>">Verified on TrueTop</a>`
 
 No account connections, no analytics access. The owner runs the check from the
 product page; a daily job re-checks every verified listing.
